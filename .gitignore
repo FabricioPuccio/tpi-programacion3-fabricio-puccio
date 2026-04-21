@@ -1,0 +1,22 @@
+# Archivos del sistema operativo Windows
+Thumbs.db
+Desktop.ini
+
+# Archivos de VS Code
+.vscode/
+
+# Dependencias de Node.js (para cuando uses TypeScript/Vite)
+node_modules/
+dist/
+*.local
+
+# Archivos de Java (para cuando llegues a Spring Boot)
+target/
+*.jar
+*.war
+*.class
+.gradle/
+build/
+
+# Logs
+*.log
