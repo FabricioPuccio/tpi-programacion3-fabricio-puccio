@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Iniciar Sesión</title>
+    <!-- Vinculamos el CSS externo -->
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <main class="contenedor-login">
+        <div class="tarjeta-login">
+
+            <h1 class="tarjeta-login__titulo">Food Store</h1>
+            <h2 class="tarjeta-login__subtitulo">Iniciar Sesión</h2>
+
+            <form class="formulario-login" action="#" method="post">
+
+                <!-- Campo Email -->
+                <label for="email" class="formulario-login__label">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="formulario-login__input"
+                    placeholder="ejemplo@correo.com" required>
+
+                <!-- Campo Contraseña -->
+                <label for="password" class="formulario-login__label">Contraseña:</label>
+                <input type="password" id="password" name="password" class="formulario-login__input"
+                    placeholder="Ingresá tu contraseña" required>
+
+                <!-- Botón de Ingreso -->
+                <button type="submit" class="formulario-login__boton">Ingresar</button>
+
+            </form>
+
+            <!-- Pie de la tarjeta: Texto + Enlace -->
+            <div class="tarjeta-login__pie">
+                <span>¿No tenés cuenta?</span>
+                <a href="#" class="tarjeta-login__registro">Registrate acá</a>
+            </div>
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>

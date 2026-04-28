@@ -1,4 +1,5 @@
 # Trabajo Práctico Integrador
+**Versión:** 1.2 - CSS3  
 
 **Alumno:** Fabricio Puccio  
 **Materia:** Programación III  
@@ -20,15 +21,11 @@ tpi-programacion3-fabricio-puccio/
 ├── frontend/                # Aplicación cliente (HTML, CSS, JS/TS)
 │   ├── index.html           # Vista pública del catálogo de productos
 │   ├── admin.html           # Panel de administración (gestión de productos)
-│   ├── assets/              # Recursos estáticos (imágenes.)
+│   ├── login/               # Módulo de autenticación (CSS)
+│   │   ├── login.html
+│   │   └── login.css
+│   ├── assets/              # Recursos estáticos (imágenes)
 │       └── img/
-│   
-│      
-│   
-│       
-│       
-│       
-│
 ├── backend/                 
 │   └── ...
 │
@@ -42,17 +39,17 @@ tpi-programacion3-fabricio-puccio/
 
 ## ✅ Estado del Proyecto
 
-| Unidad | Tecnología       | Estado         | Entregable                                   |
-|--------|------------------|----------------|----------------------------------------------|
-| 1      | HTML5            | ✅ **Completo** | Estructura semántica de `index.html` y `admin.html` |
-| 2      | CSS3             | ⏳ Pendiente    |                                                     |
-| 3      | JavaScript       | ⏳ Pendiente    |                                                     |
-| 4      | TypeScript       | ⏳ Pendiente    |                                                     |
-| 5      | Java + Spring    | ⏳ Pendiente    |                                                     |
+| Unidad | Tecnología       | Estado          | Entregable                                                            |
+|--------|------------------|-----------------|-----------------------------------------------------------------------|
+| 1      | HTML5            | ✅ **Completo** | Estructura semántica de `index.html` y `admin.html`                   |
+| 2      | CSS3             | ✅ **Completo** | Página de Login estilizada con variables, Flexbox, BEM y pseudoclases |
+| 3      | JavaScript       | ⏳ Pendiente    |                                                                       |
+| 4      | TypeScript       | ⏳ Pendiente    |                                                                       |
+| 5      | Java + Spring    | ⏳ Pendiente    |                                                                       |
 
 ---
 
-## 🚀 Cómo visualizar el proyecto (Unidad 1 - HTML)
+## 🚀 Cómo visualizar el proyecto
 
 1.  Cloná el repositorio:
     \`\`\`bash
@@ -65,6 +62,8 @@ tpi-programacion3-fabricio-puccio/
     \`\`\`
 
 3.  Abrí `index.html` o `admin.html` en tu navegador preferido.
+
+4.  Para ver la página de login, abrí `login/login.html`.
 
 ---
 
@@ -90,6 +89,17 @@ tpi-programacion3-fabricio-puccio/
 - Uso de `lang="es"` para el idioma.
 - Etiquetas `<label>` asociadas a campos de formulario.
 - Código indentado y comentado para facilitar la lectura.
+
+## 📋 Características Implementadas (Unidad 2 - CSS3)
+
+### Página de Login (`login/login.html`)
+- Centrado vertical y horizontal con **Flexbox**.
+- Variables globales en `:root` para gestionar colores y tipografía.
+- **Metodología BEM** para nomenclatura profesional de clases.
+- Pseudoclases `:hover` y `:focus` para interactividad en inputs y botones.
+- **Transiciones suaves** (`transition`) en cambios de color y escala.
+- Enlace de registro estilizado con texto complementario.
+- Archivo CSS externo vinculado con `<link>`.
 
 ---
 

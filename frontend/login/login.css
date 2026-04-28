@@ -1,0 +1,134 @@
+/*:root es una pseudo-clase CSS que selecciona el elemento raíz (etiqueta <html> del documento (No lo leí en el PDF) */
+/* Su gran utilidad es declarar variables globales */
+:root {
+    --color-primario: #ff6347;
+    --color-fondo: #f0f0f0;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --color-borde: #ddd;
+    --color-focus: #ff4500;
+}
+
+/* Importante (hacer el reset)  "*" Afecta absolutamente a todos los elementos */
+* {
+    /* El margin de TODO */
+    margin: 0;
+
+    /* El padding de TODO */
+    padding: 0;
+
+    /* Se cambia la forma de calcular el tamaño total */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    /* Esto centrará la tarjeta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Se centra de manera vertical */
+    min-height: 100vh;
+}
+
+.contenedor-login {
+    /* Ocupa casi todo el ancho en celu, pero se limita en escritorio */
+    width: 90%;
+    /* Para que no sea una línea interminable */
+    max-width: 400px;
+}
+
+.tarjeta-login {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    /* Importante: Con rgba se puede controlar la opacidad */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-login__titulo {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-login__subtitulo {
+    text-align: center;
+    color: var(--color-texto);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.formulario-login__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+.formulario-login__input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--color-borde);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    /* Se saca el borde del navegador */
+    transition: border-color 0.3s ease;
+}
+
+/* Pseudoclase :focus */
+.formulario-login__input:focus {
+    border-color: var(--color-focus);
+}
+
+.formulario-login__boton {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 0.5rem;
+}
+
+/* Pseudoclase :hover */
+.formulario-login__boton:hover {
+    background-color: var(--color-focus);
+    /* Efecto sutil de agrandar */
+    transform: scale(1.02);
+}
+
+.tarjeta-login__pie {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--color-texto);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.tarjeta-login__registro {
+    color: var(--color-primario);
+    font-style: normal;
+    /* Anula la cursiva del pie */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tarjeta-login__registro:hover {
+    text-decoration: underline;
+}
