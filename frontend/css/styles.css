@@ -1,0 +1,225 @@
+/* ===================== VARIABLES ===================== */
+:root {
+    --color-primario: #ff6347;
+    --color-secundario: #f4a261;
+    --color-fondo: #f0f0f0;
+    --color-texto: #333;
+    --color-blanco: #ffffff;
+    --color-focus: #ff4500;
+    --sombra: 0 2px 8px rgba(0,0,0,0.1);
+    --radio: 8px;
+    --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===================== RESET BÁSICO ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 0;
+}
+
+/* ===================== HEADER ===================== */
+header {
+    grid-column: 1 / -1;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--sombra);
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+header nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+/* ===================== SIDEBAR ===================== */
+aside {
+    background-color: var(--color-blanco);
+    padding: 1.5rem;
+    box-shadow: var(--sombra);
+    grid-row: 2 / 3;
+}
+
+aside h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 0.5rem;
+}
+
+#lista-categorias {
+    list-style: none;
+}
+
+#lista-categorias li {
+    margin-bottom: 0.5rem;
+}
+
+#lista-categorias a {
+    text-decoration: none;
+    color: var(--color-texto);
+    display: block;
+    padding: 0.3rem 0.5rem;
+    border-radius: var(--radio);
+    transition: background 0.2s, color 0.2s;
+}
+
+#lista-categorias a:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+/* ===================== CONTENIDO PRINCIPAL ===================== */
+main {
+    padding: 2rem;
+    background-color: var(--color-fondo);
+}
+
+main h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--color-primario);
+}
+
+/* ===================== FORMULARIO DE BÚSQUEDA ===================== */
+main form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+main form label {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+}
+
+main form input {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    outline: none;
+    border-radius: var(--radio);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.btn-buscar {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radio);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+main form input:focus {
+    border-color: var(--color-focus);
+}
+
+.btn-buscar:hover {
+    background-color: #f92702;
+}
+
+/* ===================== GRILLA DE PRODUCTOS ===================== */
+#contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Clase asignada dinámicamente */
+.producto {
+    background-color: var(--color-blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto:hover {
+    transform: translateY(-4px);
+}
+
+.producto h3 {
+    font-size: 1.1rem;
+    margin: 0.8rem 1rem 0.4rem;
+}
+
+.producto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.producto p {
+    margin: 0 1rem 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.producto .precio {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.btn-agregar {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.6rem;
+    margin: 0 1rem 1rem;
+    border-radius: var(--radio);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: auto;
+}
+
+.btn-agregar:hover {
+    background-color: #e76f51;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    grid-column: 1 / -1;
+    background-color: #264653;
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}

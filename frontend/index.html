@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Store - Catálogo</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
     <!-- ==================== ENCABEZADO Y NAVEGACIÓN ==================== -->
     <header>
@@ -22,50 +25,23 @@
     <!-- ==================== BARRA LATERAL (ASIDE) ==================== -->
     <aside>
         <h2>Categorías</h2>
-        <ul>
-            <li><a href="#">Todas</a></li>
-            <li><a href="#">Hamburguesas</a></li>
-            <li><a href="#">Pizzas</a></li>
-            <li><a href="#">Bebidas</a></li>
-            <li><a href="#">Papas Fritas</a></li>
-        </ul>
+        <ul id="lista-categorias"> </ul>
     </aside>
 
     <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
     <main>
         <!-- Buscador -->
-        <section aria-label="Buscador de productos">
+        <section>
             <form action="#" method="get">
                 <label for="buscar">Buscar producto:</label>
                 <input type="search" id="buscar" name="buscar" placeholder="Ej: Hamburguesa doble">
-                <button type="submit">Buscar</button>
+                <button type="submit" class="btn-buscar">Buscar</button>
             </form>
         </section>
 
         <!-- Grilla de productos -->
-        <section aria-label="Productos destacados">
-            <h2>Nuestros Productos</h2>
-
-            <!-- Producto 1 -->
-            <article>
-                <img src="assets/img/hamburguesa.jpg" alt="Hamburguesa triple smash con queso cheddar" width="300">
-                <h3>Hamburguesa Triple</h3>
-                <p>Hamburguesa triple con cheddar, cebolla caramelizada y panceta.</p>
-                <p>Precio: <strong>$25000.00</strong></p>
-                <button type="button">Ver Detalle</button>
-                <button type="button">Agregar al carrito</button>
-            </article>
-            <br>
-            <!-- Producto 2 -->
-            <article>
-                <img src="assets/img/pizza.jpg" alt="Pizza Muzzarella con salsa casera" width="300">
-                <h3>Pizza Muzzarella</h3>
-                <p>Salsa de tomate casera y muzzarella. Opción vegana disponible.</p>
-                <p>Precio: <strong>$18000.00</strong></p>
-                <button type="button">Ver Detalle</button>
-                <button type="button">Agregar al carrito</button>
-            </article>
-        </section>
+        <h2>Nuestros Productos</h2>
+        <section id="contenedor-productos"></section>
     </main>
 
     <!-- ==================== PIE DE PÁGINA ==================== -->
@@ -75,5 +51,9 @@
             Contacto: <a href="mailto:info@foodstore.com">info@foodstore.com</a>
         </address>
     </footer>
+    <!-- ==================== ARCHIVOS JS ==================== -->
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
